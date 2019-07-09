@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // import PickedDiscussion from './PickedDicussion';
 
 export default function DiscussionList(props) {
-    console.log(props.discussionList);
+  console.log(props.discussionList);
     
   return (
     <div>
@@ -14,8 +14,8 @@ export default function DiscussionList(props) {
           title={discussion.title}
           description={discussion.description}
           key={discussion.id}/>
-      )},
-        {/* {props.discussionList.map((picked) =>
+      )}
+      {/* {props.discussionList.map((picked) =>
         <PickedDiscussion userName={picked.userName}
           title={picked.title}
           description={picked.description}

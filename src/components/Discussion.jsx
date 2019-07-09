@@ -6,7 +6,7 @@ export default function Discussion(props) {
   return(
     <div>
       <div>
-      <Link to="/pickeddiscussion/:{props.id}"><h5>{props.title}</h5></Link>
+        <Link to='/pickeddiscussion/{props.id}'><h5>{props.title}</h5></Link>
         {/* <Link to="/{id}"></Link> */}
         <hr/>
       </div>
