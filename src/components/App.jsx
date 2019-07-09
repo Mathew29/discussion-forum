@@ -4,6 +4,7 @@ import DiscussionList from './DiscussionList';
 import NewDiscussionForm from './NewDiscussionForm';
 import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
+import PickedDiscussionList from './PickedDiscussionList';
 
 class App extends React.Component {
 
@@ -22,12 +23,15 @@ class App extends React.Component {
   }
 
   render() {
+    //   console.log(masterDiscussionList);
+      
     return (
       <div>
         <Header />
         <Switch>
           <Route exact path='/' render={() => <DiscussionList discussionList={this.state.masterDiscussionList} />} />
           <Route path='/newdiscussion' render={() => <NewDiscussionForm onNewDiscussionCreation={this.handleAddingNewDiscussionToList}/>} />
+          <Route path="/pickeddiscussion/:id" render={() => <PickedDiscussionList pickedList={this.state.masterDiscussionList} /> } />
           <Route component={Error404} />
         </Switch>
       </div>

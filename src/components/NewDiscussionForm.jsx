@@ -13,7 +13,7 @@ function NewDiscussionForm(props) {
     console.log(props);
     
     props.onNewDiscussionCreation({userName: _userName.value, title: _title.value, description: _description.value, id: v4()});
-    props.history.push('/')
+    props.history.push('/');
   }
 
   
